@@ -1,0 +1,7 @@
+{{ rows }}
+    <section {{ if anchor }}id="{{ anchor }}" name="{{ anchor }}"{{ /if }}>
+        {{ if type === "row" }}
+            {{ partial src="acorns/partials/row" }}
+        {{ /if }}
+    </section>
+{{ /rows }}

@@ -1,0 +1,521 @@
+title: Cols
+fields:
+  -
+    handle: cols
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            col:
+              display: Column
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: full_bard
+                -
+                  handle: background_image
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'BG Image'
+                    icon: assets
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - image
+                    replicator_preview: true
+                -
+                  handle: background_opacity
+                  field:
+                    min: 0
+                    max: 100
+                    step: 5
+                    default: 100
+                    type: range
+                    display: 'BG Image Opacity'
+                    icon: range
+                    instructions: 'For background image'
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    replicator_preview: true
+                -
+                  handle: background_color
+                  field:
+                    allow_any: true
+                    type: color
+                    display: 'BG Color'
+                    icon: color
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    replicator_preview: true
+                -
+                  handle: col_text_color
+                  field:
+                    swatches:
+                      - '#ffffff'
+                      - '#000000'
+                    allow_any: true
+                    type: color
+                    display: 'Text Color'
+                    icon: color
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: col_padding
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Padding
+                    icon: text
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: links_to_buttons
+                  field:
+                    default: false
+                    type: toggle
+                    display: 'Links to Buttons'
+                    icon: toggle
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    width: 25
+                -
+                  handle: video_embed
+                  field:
+                    type: video
+                    display: 'Video Embed'
+                    icon: video
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    width: 50
+                -
+                  handle: custom_css
+                  field:
+                    theme: material
+                    mode: css
+                    mode_selectable: true
+                    indent_type: tabs
+                    indent_size: 4
+                    key_map: default
+                    line_numbers: true
+                    line_wrapping: true
+                    antlers: true
+                    type: code
+                    display: 'Custom CSS'
+                    icon: code
+                    instructions: 'Everything in-between <style></style>.  You can scope this column with `me { }`.'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            accordian:
+              display: Accordian
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: item
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          new_set:
+                            display: 'New Set'
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: question
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Question
+                                  icon: text
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: answer
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - removeformat
+                                    - quote
+                                    - anchor
+                                    - image
+                                    - table
+                                  smart_typography: false
+                                  save_html: false
+                                  inline: false
+                                  toolbar_mode: fixed
+                                  reading_time: false
+                                  word_count: false
+                                  fullscreen: true
+                                  allow_source: true
+                                  enable_input_rules: true
+                                  enable_paste_rules: true
+                                  remove_empty_nodes: false
+                                  antlers: false
+                                  link_noopener: false
+                                  link_noreferrer: false
+                                  target_blank: false
+                                  always_show_set_button: false
+                                  collapse: false
+                                  previews: true
+                                  type: bard
+                                  display: Answer
+                                  icon: bard
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Item
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            testimonials:
+              display: Testimonials
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: testimonials
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          testimonial:
+                            display: Testimonial
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: picture
+                                field:
+                                  max_files: 1
+                                  mode: list
+                                  container: assets
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Picture
+                                  icon: assets
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - image
+                              -
+                                handle: name
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Name
+                                  icon: text
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: summary
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Summary
+                                  icon: text
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: detail
+                                field:
+                                  antlers: false
+                                  type: textarea
+                                  display: Detail
+                                  icon: textarea
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Testimonials
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: Columns
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      max_sets: 12
+      replicator_preview: true
+  -
+    handle: row_layout
+    field:
+      options:
+        equal: 'Equal Columns'
+        hero: 'Hero (First Col Full Width)'
+        hero2col: 'Hero 2-col (1st Col Full Width)'
+        cta: 'CTA (First & Last Col Full Width)'
+        2col: '1/2 + 1/2'
+        3col: '1/3 + 1/3 + 1/3'
+        4col: '1/4 + 1/4 + 1/4 + 1/4'
+        third: '1/3 + 2/3'
+        third-invert: '3/2 + 1/3'
+        quarter: '1/4 + 3/4'
+        quarter-invert: '3/4 + 1/4'
+        midhalf: '1/4 + 1/2 + 1/4'
+        single: 'Single Column'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: equal
+      type: select
+      display: 'Row Layout'
+      icon: select
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: align_row_content
+    field:
+      options:
+        top: 'Default (Top)'
+        center: Center
+        bottom: Bottom
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: top
+      type: select
+      display: 'Align Row Content'
+      icon: select
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: padding
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Row Vertical Padding'
+      icon: text
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: anchor
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Anchor & ID'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      width: 25
+      replicator_preview: true
+  -
+    handle: background_color
+    field:
+      allow_any: true
+      type: color
+      display: 'BG Color'
+      icon: color
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      replicator_preview: true
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'BG Image'
+      icon: assets
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - image
+      replicator_preview: true
+  -
+    handle: background_opacity
+    field:
+      min: 0
+      max: 100
+      step: 5
+      default: 100
+      type: range
+      display: 'BG Image Opacity'
+      icon: range
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      replicator_preview: true
+  -
+    handle: text_color
+    field:
+      swatches:
+        - '#ffffff'
+        - '#000000'
+      allow_any: true
+      type: color
+      display: 'Text Color'
+      icon: color
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: grid_custom_css
+    field:
+      theme: material
+      mode: css
+      mode_selectable: true
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      antlers: true
+      type: code
+      display: 'Content Container CSS'
+      icon: code
+      instructions: 'Content container styles. You can scope this with `me { }`.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+  -
+    handle: row_custom_css
+    field:
+      theme: material
+      mode: css
+      mode_selectable: true
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      antlers: true
+      type: code
+      display: 'Row Custom CSS'
+      icon: code
+      instructions: 'Outer row custom CSS - you can scope this with `me { }`.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
